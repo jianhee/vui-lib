@@ -1,0 +1,24 @@
+{
+  "name": "vui",
+  "version": "1.0.0",
+  "description": "Vue 3 组件库 + 工具库",
+  "author": "jianhe",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "style": "./index.scss",
+  "exports": {
+    ".": "./index.mjs",
+    "./components": "./components.mjs",
+    "./icons": "./icons.mjs",
+    "./composables": "./composables.mjs",
+    "./utils": "./utils.mjs",
+    "./plugins": "./plugins.mjs",
+    "./index.scss": "./index.scss"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@vueuse/core": "^14.3.0",
+    "dayjs": "^1.11.20",
+    "vue": "^3.5.34"
+  }
+}

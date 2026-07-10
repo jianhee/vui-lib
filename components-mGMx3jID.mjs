@@ -1474,7 +1474,11 @@ var cn = /* @__PURE__ */ e(an, [["render", sn]]), ln = {
 	}
 }, Sn = ({ type: e, wrapperElRef: t, inputElRef: n, modelValue: r, props: i, emits: a }) => {
 	let o = N("vuiFormRoot", null), s = e === "input", c = T(() => i.disabled || o?.props?.disabled), l = T(() => i.readonly || o?.props?.readonly), u = Se(t), { focused: d } = we(n);
-	Q(t, "click", () => d.value = !c.value);
+	Q(t, "click", () => {
+		!d.value && !c.value && (d.value = !0);
+	}), ce(() => {
+		i.autofocus && !d.value && !c.value && (d.value = !0);
+	});
 	let f = T(() => `vui-input--${i.size}`), p = T(() => ({
 		"is-disabled": c.value,
 		"is-focus": d.value && !c.value
